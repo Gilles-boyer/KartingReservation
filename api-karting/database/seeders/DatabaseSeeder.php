@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Client;
 use App\Models\Reservation;
+use App\Models\ReservationSlot;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Slot;
 use App\Models\User;
@@ -19,6 +20,8 @@ class DatabaseSeeder extends Seeder
     {
         //client
         Client::factory()->count(50)->create();
+
+        //reservation
         Reservation::factory()->count(20)->create();
         // User::factory(10)->create();
 
@@ -43,5 +46,8 @@ class DatabaseSeeder extends Seeder
                 }
             }
         }
+
+        //reservation_slot
+        ReservationSlot::factory()->count(40)->create();
     }
 }

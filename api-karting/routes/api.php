@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ReservationController;
+use App\Http\Controllers\ReservationSlotController;
 use App\Http\Controllers\SlotController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -16,3 +18,4 @@ Route::get('/user', function (Request $request) {
 Route::apiResource('slots', SlotController::class);
 Route::apiResource('clients', ClientController::class);
 Route::apiResource('reservations', ReservationController::class);
+Route::apiResource('reservation-slots', ReservationSlotController::class);
