@@ -5,7 +5,7 @@ namespace App\Http\Resources;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ReservationSlotResource extends JsonResource
+class PaymentResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,9 +16,10 @@ class ReservationSlotResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'reservation_id' => $this->reservation_id,
-            'slot_id' => $this->slot_id,
-            'finished' => $this->finished
+            'commentaire' => $this->commentaire,
+            'type' => $this->type,
+            'date' => $this->date,
+            'amount' => $this->amount,
         ];
     }
 }

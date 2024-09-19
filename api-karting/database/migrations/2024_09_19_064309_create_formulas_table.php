@@ -11,11 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reservation_slots', function (Blueprint $table) {
+        Schema::create('formulas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('reservation_id')->constrained()->onDelete('cascade');
-            $table->foreignId('slot_id')->constrained()->onDelete('cascade');
-            $table->boolean('finished')->default(false);
+            $table->string('name', 100);
+            $table->text('description')->nullable();
+            $table->decimal('price', 10, 2);
+            $table->integer('max_slot');
             $table->timestamps();
         });
     }
@@ -25,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reservation_slots');
+        Schema::dropIfExists('formulas');
     }
 };

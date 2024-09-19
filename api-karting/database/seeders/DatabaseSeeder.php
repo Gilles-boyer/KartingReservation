@@ -3,9 +3,13 @@
 namespace Database\Seeders;
 
 use App\Models\Client;
+use App\Models\Formula;
+use App\Models\Payment;
+use App\Models\Pilot;
 use App\Models\Reservation;
-use App\Models\ReservationSlot;
+use App\Models\ReservationPilot;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\ReservationSlot;
 use App\Models\Slot;
 use App\Models\User;
 use Carbon\Carbon;
@@ -49,5 +53,9 @@ class DatabaseSeeder extends Seeder
 
         //reservation_slot
         ReservationSlot::factory()->count(40)->create();
+        Pilot::factory()->count(20)->create();
+        Formula::factory()->count(10)->create();
+        Payment::factory()->count(20)->create();
+        ReservationPilot::factory()->count(20)->create();
     }
 }

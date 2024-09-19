@@ -5,15 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ReservationSlot extends Model
+class Formula extends Model
 {
     use HasFactory;
 
-
     protected $fillable = [
-        'reservation_id',
-        'slot_id',
-        'finished'
+        'name',
+        'description',
+        'price',
+        'max_slot',
     ];
-
 }
